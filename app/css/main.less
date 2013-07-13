@@ -3,7 +3,7 @@
 @light: rgb(243,242,244);
 @dark: rgb(47,47,47);
 @primary: rgb(87,122,20);
-@secondary: rgb(156,138,129);
+@secondary: rgb(102,88,81);
 
 * {
 	padding: 0;
@@ -11,46 +11,97 @@
 }
 
 body {
-	font-size: 62.5%;
-	background-color: red;
-	padding-top: 20%;
-}
-
-header, section {
-	h1, h2, & > p {
-		text-align: center;
-		font-family: "adelle-sans", "Helvetica", "Arial", sans-serif;
-		color: #fff;
-		text-shadow: 0 0 4px rgba(0,0,0,0.6);
-	}
+	font-family: "adelle-sans", "Helvetica", "Arial", sans-serif;
+	background: @light;
+	color: @dark;
 }
 
 header {
+	background: @primary;
+	padding: 50px 2%;
+	text-align: center;
+	color: @light;
+	text-shadow: 0 0 4px @dark;
+	
 	h1 {
-		font-size: 6em;
-		font-size: 6rem;
+		font-size: 3em;
 		text-transform: uppercase;
 	}
 	
 	h2 {
-		font-size: 2em;
-		font-size: 2rem;
+		font-size: 1.3em;
+		padding-top: 20px;
 	}
 }
 
 section {
+	position: relative;
+	margin: 0 auto;
+	max-width: 600px;
+	padding: 10px 2% 0 2%;
+	
 	p {
-		font-size: 1.2em;
-		font-size: 1.2rem;
-		text-transform: uppercase;
-		padding-top: 5%;
+		padding: 10px 0;
+	}
+}
+
+footer {
+	font-size: .9em;
+	background: #fff;
+	padding: 5px 2%;
+	margin-top: 20px;
+	background: @secondary;
+	color: @light;
+	overflow: hidden;
+	
+	a {
+		color: @light;
+	}
+	
+	p {
+		&:first-of-type {
+			float: left;
+		}
+		&:last-of-type {
+			float: right;
+		}
 	}
 }
 
 #mc_embed_signup {
 	.rounded(5px);
-	max-width: 450px;
+	margin-top: 10px;
 	
-	margin: 5% auto 0 auto;
-	position: relative;
+	input[type=submit] {
+		background: @secondary;
+	
+		&:hover {
+			background: lighten(@secondary, 20%);
+		}
+	}
+}
+
+@media screen and (min-width: 600px) {
+	header {
+		padding: 70px 2%;
+		
+		h1 {
+			font-size: 4em;
+		}
+		
+		h2 {
+			font-size: 2em;
+			padding-top: 0;
+		}
+	}
+}
+
+@media screen and (min-width: 900px) {
+	header {
+		padding: 100px 2%;
+		
+		h1 {
+			font-size: 6em;
+		}
+	}
 }
