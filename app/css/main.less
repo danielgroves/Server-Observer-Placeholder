@@ -19,6 +19,7 @@ body {
 header {
 	background: @primary;
 	padding: 50px 2%;
+	padding-bottom: 0;
 	text-align: center;
 	color: @light;
 	text-shadow: 0 0 4px @dark;
@@ -32,6 +33,10 @@ header {
 	h2 {
 		font-size: 1.3em;
 		padding-top: 20px;
+	}
+	
+	.social {
+		padding: 50px 0 20px 0;
 	}
 }
 
@@ -69,6 +74,13 @@ footer {
 	}
 }
 
+.social {
+	max-width: 343px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+}
+
 #mc_embed_signup {
 	.rounded(5px);
 	margin-top: 10px;
@@ -85,6 +97,7 @@ footer {
 @media screen and (min-width: 600px) {
 	header {
 		padding: 70px 2%;
+		padding-bottom: 0;
 		
 		h1 {
 			font-size: 5em;
@@ -94,15 +107,24 @@ footer {
 			font-size: 2em;
 			padding-top: 0;
 		}
+		
+		.social {
+			padding: 70px 0 20px 0;
+		}
 	}
 }
 
 @media screen and (min-width: 900px) {
 	header {
 		padding: 100px 2%;
+		padding-bottom: 0;
 		
 		h1 {
 			font-size: 7em;
+		}
+		
+		.social {
+			padding: 100px 0 20px 0;
 		}
 	}
 }
