@@ -4,10 +4,10 @@
 Vagrant.configure("2") do |config|
 
   # Envronment Name
-  config.vm.box = "precise32"
+  config.vm.box = "precise64"
 
   # Where to find environment for first time
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  #config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Map a port from host to vagrant machine
   # config.vm.network :forwarded_port, guest: 80, host: 8080

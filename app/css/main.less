@@ -1,9 +1,9 @@
 @import "elements/elements.less";
 
-@light: rgb(243,242,244);
-@dark: rgb(47,47,47);
-@primary: rgb(87,122,20);
-@secondary: rgb(102,88,81);
+@light: #eee;
+@dark: #333;
+@primary: #768858;
+@secondary: #3b442c;
 
 * {
 	padding: 0;
@@ -11,9 +11,27 @@
 }
 
 body {
-	font-family: "News Cycle", "Helvetica", "Arial", sans-serif;
+	font-family: "proxima-nova", "Helvetica", "Arial", sans-serif;
 	background: @light;
 	color: @dark;
+}
+
+nav {
+	background: @primary;
+	border-bottom: 1px solid @secondary;
+	text-transform: uppercase;
+	color: @light;
+	text-align: right;
+	
+	li, a {
+		display: inline-block;
+	}
+	
+	a {
+		padding: 10px;
+		color: @light;
+		text-decoration: none;
+	}
 }
 
 header {
@@ -23,7 +41,7 @@ header {
 	text-align: center;
 	color: @light;
 	text-shadow: 0 0 4px @dark;
-	font-family: "Open Sans Condensed", "Helvetica", "Arial", sans-serif;
+	border-bottom: 1px solid @secondary;
 	
 	h1 {
 		font-size: 3em;
@@ -52,13 +70,14 @@ section {
 }
 
 footer {
-	font-size: .9em;
 	background: #fff;
-	padding: 5px 2%;
+	padding: 10px 2%;
 	margin-top: 20px;
-	background: @secondary;
+	background: @primary;
 	color: @light;
 	overflow: hidden;
+	border-top: 1px solid @secondary;
+	border-bottom: 1px solid @secondary;
 	
 	a {
 		color: @light;
@@ -75,10 +94,15 @@ footer {
 }
 
 .social {
-	max-width: 343px;
+	max-width: 344px;
 	margin: 0 auto;
 	position: relative;
 	text-align: center;
+	
+	.fb-like {
+		position: relative;
+		top: -5px;
+	}
 }
 
 #mc_embed_signup {
@@ -104,7 +128,7 @@ footer {
 		}
 		
 		h2 {
-			font-size: 2em;
+			font-size: 1.5em;
 			padding-top: 0;
 		}
 		
@@ -120,7 +144,11 @@ footer {
 		padding-bottom: 0;
 		
 		h1 {
-			font-size: 7em;
+			font-size: 6em;
+		}
+		
+		h2 {
+			font-size: 1.8em;
 		}
 		
 		.social {
